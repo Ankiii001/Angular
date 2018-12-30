@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { EventsAppComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
 
-import { from } from 'rxjs';
 @NgModule({
   imports: [
     BrowserModule
