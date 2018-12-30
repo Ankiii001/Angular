@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   template: `<div>
   <h1>Upcoming Angular Events</h1>
   <hr/>
-  <event-thumbnail [event]="event1"></event-thumbnail>
+  <event-thumbnail (eventClick) = "handleEventClicked($event)"
+  [event]="event1"></event-thumbnail>
 </div>
 `
 })
@@ -21,5 +22,9 @@ export class EventsListComponent {
             city: 'London',
             country: 'England'
         }
+    };
+
+    handleEventClicked(data) {
+        console.log('received:', data);
     }
 }
