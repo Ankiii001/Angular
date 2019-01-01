@@ -5,10 +5,7 @@ import { Component } from '@angular/core';
   template: `<div>
   <h1>Upcoming Angular Events</h1>
   <hr/>
-  <event-thumbnail #thumbnail [event]="event1"></event-thumbnail>
-  <h3>{{thumbnail.someProperty}}</h3>
-  <button class="btn btn-primary" (click)="thumbnail.logFoo()">Log
-  me some foo</button>
+  <event-thumbnail [event]="event1"></event-thumbnail>
 </div>
 `
 })
@@ -18,6 +15,7 @@ export class EventsListComponent {
         name: 'Angular Connect',
         date: '12/12/2018',
         price: '599.99',
+        time: '17:00',
         imageUrl: '/assets/images/angularconnect-shield.png',
         location: {
             address: '1057 DT',
