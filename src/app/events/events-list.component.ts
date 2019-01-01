@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   <hr/>
    <div class="row">
     <div *ngFor="let event of events" class="col-md-5">
-     <event-thumbnail></event-thumbnail>
+     <event-thumbnail [event]="event"></event-thumbnail>
     </div>
    </div>
   </div>
@@ -23,11 +23,7 @@ export class EventsListComponent {
           time: '10:00 am',
           price: 599.99,
           imageUrl: '/assets/images/angularconnect-shield.png',
-          location: {
-            address: '1057 DT',
-            city: 'London',
-            country: 'England'
-          },
+          
           sessions: [
             {
               id: 1,
