@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
     template: `
     <div class="well hoverwell thumbnail">
     <h2>{{event.name}}</h2>
-    <img [src]="event.imageUrl"/>
+    <!--<img [src]="event.imageUrl"/>-->
     <div>Date: {{event.date}}</div>
     <div>Time: {{event.time}}</div>
     <div>Price: \${{event.price}}</div>
@@ -15,10 +15,10 @@ import { Component, Input } from '@angular/core';
          {{event.location.country}}</span>
     </div>
   </div>
-  <button (click)="doSomething()">log</button>
 `,
 // adding styles to components
 styles: [`
+    .thumbnail { min-height: 210px;}
     .pad-left { margin-left: 10px; }
     .well div { color: #bbb; }
 `]
@@ -26,8 +26,4 @@ styles: [`
 })
 export class EventThumbnailComponent {
     @Input() event: any;
-
-    doSomething() {
-        console.log(' hello ');
-    }
 }
