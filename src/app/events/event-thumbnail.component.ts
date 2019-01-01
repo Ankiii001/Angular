@@ -15,6 +15,7 @@ import { Component, Input } from '@angular/core';
          {{event.location.country}}</span>
     </div>
   </div>
+  <button (click)="doSomething()">log</button>
 `,
 // adding styles to components
 styles: [`
@@ -25,4 +26,8 @@ styles: [`
 })
 export class EventThumbnailComponent {
     @Input() event: any;
+
+    doSomething() {
+        console.log(' hello ');
+    }
 }
