@@ -15,10 +15,12 @@ import { Component, Input } from '@angular/core';
     </div>
   </div>
 `,
+// adding styles to components
 styles: [`
     .pad-left { margin-left: 10px; }
-    .well div { color: black; }
+    .well div { color: #bbb; }
 `]
+
 })
 export class EventThumbnailComponent {
     @Input() event: any;
