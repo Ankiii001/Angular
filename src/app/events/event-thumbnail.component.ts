@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
     template: `
     <div class="well hoverwell thumbnail">
     <h2>{{event.name}}</h2>
+    <img [src]="event.imageUrl"/>
     <div>Date: {{event.date}}</div>
     <div>Time: {{event.time}}</div>
     <div>Price: \${{event.price}}</div>
