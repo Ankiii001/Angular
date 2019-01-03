@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { IEvent } from './shared/index';
 
 @Component({
+    // tslint:disable-next-line:component-selector
     selector: 'event-thumbnail',
     template: `
     <div [routerLink]="['/events', event.id]" class="well hoverwell thumbnail">
@@ -30,7 +32,7 @@ styles: [`
 
 })
 export class EventThumbnailComponent {
-    @Input() event: any;
+    @Input() event: IEvent;
 
     getStartTimeStyle(): any {
         if (this.event && this.event.time === '8:00 am') {
